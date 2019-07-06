@@ -32,6 +32,10 @@ public class Enemy : MonoBehaviour
 	}
 
 	private void FollowPlayer() {
+		if (target == null) {
+			return;
+		}
+
 		elapsedTime += Time.deltaTime;
 
 		if (elapsedTime > redirectInterval) {
