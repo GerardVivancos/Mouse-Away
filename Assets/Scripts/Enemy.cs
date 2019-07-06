@@ -35,11 +35,8 @@ public class Enemy : MonoBehaviour
 		elapsedTime += Time.deltaTime;
 
 		if (elapsedTime > redirectInterval) {
-			Debug.Log(rand);
 			rand = Random.insideUnitSphere;
 			elapsedTime = 0f;
-			Debug.Log(rand);
-
 		}
 
 		Vector3 distance = transform.position - target.transform.position;
